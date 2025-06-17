@@ -23,6 +23,8 @@ public class ClientHandler implements Runnable{
                 if(lineFromClient.trim().equalsIgnoreCase("exit")) {
                     break;
                 }
+                String response = lineFromClient;
+                toClient.println(response);
             }
         } catch (IOException e) {
             System.out.println("Exception in client handler "+e.getMessage());
